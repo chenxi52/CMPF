@@ -115,19 +115,5 @@ See [Getting Started](GETTING_STARTED.md).
 </table>
 
 
-
-## Citing
-
-If you use CMFP in your research, please use the following BibTeX entry.
-
-```BibTeX
-@misc{CMFP,
-  title={FrozenSeg: Harmonizing Frozen Foundation Models for Open-Vocabulary Segmentation},
-  author={Xi Chen and Haosen Yang and Sheng Jin and Xiatian Zhu and Hongxun Yao},
-  publisher={arXiv:5835590},
-  year={2024}
-}
-```
-
 ##  Acknowledgement
 [Detectron2](https://github.com/facebookresearch/detectron2), [Mask2Former](https://github.com/facebookresearch/Mask2Former), [Segment Anything](https://github.com/facebookresearch/segment-anything), [OpenCLIP](https://github.com/mlfoundations/open_clip) and [FC-CLIP](https://github.com/bytedance/fc-clip/tree/main).
