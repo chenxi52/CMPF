@@ -1,6 +1,6 @@
 # CMPF: Harmonizing Cross-Model Prior Fusion for Open-Vocabulary Segmentation
 
-This repository is the official implementation of FrozenSeg introduced in the paper:
+This repository is the official implementation of CMPF introduced in the paper:
 >[**CMPF: Harmonizing Cross-Model Prior Fusion for Open-Vocabulary Segmentation**](https://arxiv.org/abs/2409.03525)
 
 
