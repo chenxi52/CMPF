@@ -1,7 +1,6 @@
 # CMPF: Harmonizing Cross-Model Prior Fusion for Open-Vocabulary Segmentation
 
-This repository is the official implementation of CMPF introduced in the paper:
->[**CMPF: Harmonizing Cross-Model Prior Fusion for Open-Vocabulary Segmentation**](https://arxiv.org/abs/2409.03525)
+
 
 
 ## Abstract
@@ -114,6 +113,10 @@ See [Getting Started](GETTING_STARTED.md).
 </tbody>
 </table>
 
+## !!Note: 
+
+This repository serves as the official implementation for both **CMPF** and **FrozenSeg**, which are essentially the same work presented under different names.
+>[FrozenSeg: Harmonizing Frozen Foundation Models for Open-Vocabulary Segmentation](https://arxiv.org/abs/2409.03525)
 
 ##  Acknowledgement
 [Detectron2](https://github.com/facebookresearch/detectron2), [Mask2Former](https://github.com/facebookresearch/Mask2Former), [Segment Anything](https://github.com/facebookresearch/segment-anything), [OpenCLIP](https://github.com/mlfoundations/open_clip) and [FC-CLIP](https://github.com/bytedance/fc-clip/tree/main).
