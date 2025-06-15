@@ -1,12 +1,12 @@
-# FrozenSeg: Harmonizing Frozen Foundation Models for Open-Vocabulary Segmentation
+# CMPF: Harmonizing Cross-Model Prior Fusion for Open-Vocabulary Segmentation
 
 This repository is the official implementation of FrozenSeg introduced in the paper:
->[**FrozenSeg: Harmonizing Frozen Foundation Models for Open-Vocabulary Segmentation**](https://arxiv.org/abs/2409.03525)
+>[**CMPF: Harmonizing Cross-Model Prior Fusion for Open-Vocabulary Segmentation**](https://arxiv.org/abs/2409.03525)
 
 
 ## Abstract
 
->Open-vocabulary segmentation is challenging, with the need of segmenting and recognizing objects for an open set of categories in unconstrained environments. Building on the success of powerful vision-language (ViL) foundation models like CLIP, recent efforts sought to harness their zero-short capabilities to recognize unseen categories. Despite demonstrating strong performances, they still face a fundamental challenge of generating precise mask proposals for unseen categories and scenarios, resulting in inferior segmentation performance eventually. To address this, we introduce a novel approach, FrozenSeg, designed to integrate spatial knowledge from a localization foundation model (e.g., SAM) and semantic knowledge extracted from a ViL model (e.g., CLIP), in a synergistic framework. Taking the ViL model's visual encoder as the feature backbone, we inject the space-aware feature into learnable query and CLIP feature in the transformer decoder. In addition, we devise a mask proposal ensemble strategy for further improving the recall rate and mask quality. To fully exploit pre-trained knowledge while minimizing training overhead, we freeze both foundation models, focusing optimization efforts solely on a light transformer decoder for mask proposal generation – the performance bottleneck. Extensive experiments show that FrozenSeg advances state-of-the-art results across various segmentation benchmarks, trained exclusively on COCO panoptic data and tested in a zero-shot manner.
+>Open-vocabulary segmentation poses significant challenges, as it requires segmenting and recognizing objects across an open set of categories in unconstrained environments. Building on the success of powerful vision-language (ViL) foundation models, such as CLIP, recent efforts sought to harness their zero-shot capabilities to recognize unseen categories. Despite notable performance improvements, these models still encounter the critical issue of generating and recognizing precise mask proposals for unseen categories and scenarios, resulting in inferior segmentation performance eventually. To address this challenge, we introduce a novel Cross-Model Prior Fusion (CMPF) framework, an innovative framework that fuses visual knowledge from a localization foundation model (e.g., SAM) and text knowledge from a ViL model (e.g., CLIP), leveraging their complementary knowledge priors to overcome inherent limitations in mask proposal generation. Taking the ViL model’s visual encoder as the feature backbone, we propose Query Injector and Feature Injector to inject the visual localization feature into the learnable queries and CLIP features respectively, within a transformer decoder. In addition, an OpenSeg Ensemble strategy is designed to further improve mask quality by incorporating SAM’s universal segmentation masks during inference. To fully exploit pre-trained knowledge while minimizing training overhead, we freeze both foundation models, focusing optimization efforts solely on a lightweight transformer decoder for mask proposal generation – the performance bottleneck. Extensive experiments demonstrate that CMPF advances state-of-the-art results across various segmentation benchmarks, trained exclusively on COCO panoptic data, and tested in a zero-shot manner.
 
 ![FrozenSeg design](images/frozenseg.png)
 
@@ -62,7 +62,7 @@ See [Getting Started](GETTING_STARTED.md).
     <td align="center">mIoU</td>
     <td></td>
   </tr>
-    <td align="center"><a href="configs/coco/frozenseg/r50x64_eval_ade20k.yaml"> FrozenSeg (ResNet50x64) </a></td>
+    <td align="center"><a href="configs/coco/frozenseg/r50x64_eval_ade20k.yaml"> CMPF (ResNet50x64) </a></td>
     <td align="center">23.1</td>
     <td align="center">13.5</td>
     <td align="center">30.7</td>
@@ -87,9 +87,9 @@ See [Getting Started](GETTING_STARTED.md).
     <td align="center"><a href="https://drive.google.com/file/d/1wiPKPczTXrH1cPrDbf-l9NGdOkMUUikw/view?usp=drive_link"> checkpoint </a></td>
   </tr>
   <tr>
-    <td align="center"><a href="configs/coco/frozenseg/convnext_large_eval_ade20k.yaml"> FrozenSeg (ConvNeXt-Large) </a></td>
+    <td align="center"><a href="configs/coco/frozenseg/convnext_large_eval_ade20k.yaml"> CMPF (ConvNeXt-Large) </a></td>
     <td align="center">25.9</td>
-    <td align="center">16.4</td>
+    <td align="center">16.5</td>
     <td align="center">34.4</td>
     <td align="center">59.9</td>
     <td align="center">45.8</td>
@@ -118,10 +118,10 @@ See [Getting Started](GETTING_STARTED.md).
 
 ## Citing
 
-If you use FrozenSeg in your research, please use the following BibTeX entry.
+If you use CMFP in your research, please use the following BibTeX entry.
 
 ```BibTeX
-@misc{FrozenSeg,
+@misc{CMFP,
   title={FrozenSeg: Harmonizing Frozen Foundation Models for Open-Vocabulary Segmentation},
   author={Xi Chen and Haosen Yang and Sheng Jin and Xiatian Zhu and Hongxun Yao},
   publisher={arXiv:5835590},
